@@ -1,6 +1,7 @@
 {
   "track_id": "nix",
   "language": "Nix",
+  "slug": "nix",
   "active": false,
   "status": {
     "concept_exercises": false,
