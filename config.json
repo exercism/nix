@@ -16,9 +16,6 @@
     "indent_size": 4,
     "highlightjs_language": "nix"
   },
-  "ignore_pattern": "[Ee]xample",
-  "solution_pattern": "[Ee]xample",
-  "test_pattern": "[Tt]est",
   "exercises": {
     "concept": [],
     "practice": []
