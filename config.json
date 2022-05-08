@@ -9,18 +9,62 @@
     "representer": false,
     "analyzer": false
   },
-  "blurb": "",
+  "blurb": "Nix is a dynamically typed, functional DSL for the Nix package manager.",
   "version": 3,
   "online_editor": {
     "indent_style": "space",
-    "indent_size": 4,
+    "indent_size": 2,
     "highlightjs_language": "nix"
+  },
+  "files": {
+    "solution": ["%{kebab_slug}.nix"],
+    "test": ["%{kebab_slug}-test.nix"],
+    "example": [".meta/example.nix"]
   },
   "exercises": {
     "concept": [],
     "practice": []
   },
   "concepts": [],
-  "key_features": [],
-  "tags": []
+  "key_features": [
+    {
+      "title": "Purely Functional",
+      "content": "Nix is a purely functional language, with no side effects.",
+      "icon": "functional"
+    },
+    {
+      "title": "Lazy",
+      "content": "Expressions are only evaluated when they are needed.",
+      "icon": "evolving"
+    },
+    {
+      "title": "Dynamic",
+      "content": "Nix's dynamic typing supports powerful metaprogramming.",
+      "icon": "powerful"
+    },
+    {
+      "title": "Familiar",
+      "content": "Nix's syntax is similar to JSON, which makes it easy to read and write.",
+      "icon": "easy"
+    },
+    {
+      "title": "Simple",
+      "content": "There is a small set of core features.",
+      "icon": "small"
+    },
+    {
+      "title": "Community-Supported",
+      "content": "Nix is developed by a diverse community",
+      "icon": "community"
+    }
+  ],
+  "tags": [
+    "paradigm/functional",
+    "typing/dynamic",
+    "typing/strong",
+    "execution_mode/interpreted",
+    "platform/mac",
+    "platform/linux",
+    "runtime/language_specific"
+  ]
 }
