@@ -1,5 +1,5 @@
 # Exercism Nix Track
 
-[![Configlet Status](https://github.com/exercism/nix/workflows/configlet/badge.svg)]
+[![Configlet](https://github.com/exercism/nix/actions/workflows/configlet.yml/badge.svg)](https://github.com/exercism/nix/actions/workflows/configlet.yml)
 
 Exercism exercises in Nix.
