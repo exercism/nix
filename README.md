@@ -1,5 +1,8 @@
 # Exercism Nix Track
 
-[![Configlet](https://github.com/exercism/nix/actions/workflows/configlet.yml/badge.svg)](https://github.com/exercism/nix/actions/workflows/configlet.yml)
+## Status
 
-Exercism exercises in Nix.
+The track has had very little work done on it since creating the repository.
+The only exercise that exists is `hello-world`.
+
+If you wish to work on this track, please post in the [Exercism Community Forum](https://forum.exercism.org/c/exercism/building-exercism/125) to discuss it with the team.
