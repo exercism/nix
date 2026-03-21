@@ -4,7 +4,7 @@
   "slug": "nix",
   "active": false,
   "status": {
-    "concept_exercises": false,
+    "concept_exercises": true,
     "test_runner": false,
     "representer": false,
     "analyzer": false
@@ -22,7 +22,15 @@
     "example": [".meta/example.nix"]
   },
   "exercises": {
-    "concept": [],
+    "concept": [
+      {
+        "slug": "booleans",
+        "name": "Booleans",
+        "uuid": "ee84b41f-bee8-477d-a073-aad084cde658",
+        "concepts": ["booleans"],
+        "prerequisites": []
+      }
+    ],
     "practice": [
       {
         "slug": "hello-world",
@@ -31,10 +39,24 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 1
+      },
+      {
+        "slug": "reverse-string",
+        "name": "Reverse String",
+        "uuid": "1bdd6135-d279-45bd-b8f1-0d623009e547",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
       }
     ]
   },
-  "concepts": [],
+  "concepts": [
+    {
+      "uuid": "52f257d2-499a-4b2f-a681-9243be0058a3",
+      "slug": "booleans",
+      "name": "Booleans"
+    }
+  ],
   "key_features": [
     {
       "title": "Purely Functional",

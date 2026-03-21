@@ -1,0 +1,10 @@
+[
+  {
+    "url": "https://nix.dev/manual/nix/stable/language/constructs.html#conditionals",
+    "description": "Nix language: conditionals"
+  },
+  {
+    "url": "https://nix.dev/manual/nix/stable/language/operators.html",
+    "description": "Nix language: operators"
+  }
+]

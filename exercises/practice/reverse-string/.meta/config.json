@@ -1,0 +1,15 @@
+{
+  "authors": ["andrii619"],
+  "files": {
+    "solution": [
+      "reverse-string.nix"
+    ],
+    "test": [
+      "reverse-string-test.nix"
+    ],
+    "example": [
+      ".meta/example.nix"
+    ]
+  },
+  "blurb": "Reverse a string."
+}

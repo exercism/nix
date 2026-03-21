@@ -1,0 +1,15 @@
+{
+  "authors": ["andrii619"],
+  "files": {
+    "solution": [
+      "booleans.nix"
+    ],
+    "test": [
+      "booleans-test.nix"
+    ],
+    "exemplar": [
+      ".meta/exemplar.nix"
+    ]
+  },
+  "blurb": "Learn about boolean values and conditional expressions in Nix by determining whether a year is a leap year."
+}
