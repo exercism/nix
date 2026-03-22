@@ -44,7 +44,7 @@ Nix supports `==`, `!=`, `<`, `>`, `<=`, `>=` for comparing values:
 
 ## Modulo in Nix
 
-Nix has no `%` operator and no built-in remainder function. You can implement modulo using integer division (`/`):
+Nix has no `%` operator and no built-in remainder function. You can implement modulo using integer division (`/`) or by importing the `nixpkgs.lib.trivial.mod` function. To define it using integer division:
 
 ```nix
 let
@@ -60,4 +60,14 @@ Combining this with `==` lets you check divisibility:
 
 ```nix
 mod year 4 == 0  # true if year is divisible by 4
+```
+
+Alternatively, nixpkgs provides `lib.trivial.mod`, which has the same behaviour. Since the
+test files already import nixpkgs, it is available without any extra setup:
+
+```nix
+let
+  lib = import <nixpkgs/lib>;
+in
+  lib.trivial.mod 10 3  # 1
 ```

@@ -7,12 +7,23 @@
 
 ## Implementing Modulo
 
+You can define modulo yourself using integer division:
+
 ```nix
 let
   mod = a: b: a - (b * (a / b));
 in
   mod 10 3  # 1  →  10 is not divisible by 3
   mod 9 3   # 0  →  9 is divisible by 3
+```
+
+Alternatively, nixpkgs provides `lib.trivial.mod`:
+
+```nix
+let
+  lib = import <nixpkgs/lib>;
+in
+  lib.trivial.mod 10 3  # 1
 ```
 
 Use `mod year divisor == 0` to check divisibility.
