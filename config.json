@@ -19,7 +19,8 @@
   "files": {
     "solution": ["%{kebab_slug}.nix"],
     "test": ["%{kebab_slug}-test.nix"],
-    "example": [".meta/example.nix"]
+    "example": [".meta/example.nix"],
+    "exemplar": [".meta/exemplar.nix"]
   },
   "exercises": {
     "concept": [

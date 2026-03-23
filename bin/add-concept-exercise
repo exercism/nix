@@ -1,0 +1,119 @@
+#!/usr/bin/env bash
+
+# Synopsis:
+# Scaffold the files for a new concept exercise and its associated concept.
+# After creating the exercise, follow the instructions in the output.
+
+# Example:
+# bin/add-concept-exercise booleans
+
+# Example with author:
+# bin/add-concept-exercise -a foo booleans
+
+set -euo pipefail
+scriptname=$0
+
+help_and_exit() {
+    echo >&2 "Scaffold the files for a new concept exercise."
+    echo >&2 "Usage: ${scriptname} [-h] [-a author] <exercise-slug>"
+    echo >&2 "Where: exercise-slug is also used as the concept slug."
+    echo >&2 "Where: author is the GitHub username of the exercise creator."
+    exit 1
+}
+
+die() { echo >&2 "$*"; exit 1; }
+
+required_tool() {
+    command -v "${1}" >/dev/null 2>&1 ||
+        die "${1} is required but not installed. Please install it and make sure it's in your PATH."
+}
+
+required_tool jq
+
+[[ -f ./bin/fetch-configlet ]] || die "Run this script from the repo's root directory."
+
+author=''
+while getopts :ha: opt; do
+    case $opt in
+        h) help_and_exit ;;
+        a) author=$OPTARG ;;
+        ?) echo >&2 "Unknown option: -$OPTARG"; help_and_exit ;;
+    esac
+done
+shift "$((OPTIND - 1))"
+
+(( $# >= 1 )) || help_and_exit
+
+slug="${1}"
+
+if [[ -z "${author}" ]]; then
+    read -rp 'Your GitHub username: ' author
+fi
+
+./bin/fetch-configlet
+./bin/configlet create --concept-exercise "${slug}" --author "${author}"
+
+exercise_dir="exercises/concept/${slug}"
+concept_dir="concepts/${slug}"
+
+# Scaffold the concept directory
+mkdir -p "${concept_dir}/.meta"
+
+cat > "${concept_dir}/introduction.md" << EOF
+# Introduction
+
+TODO: Add a brief introduction to the ${slug} concept with a minimal code example.
+EOF
+
+cat > "${concept_dir}/about.md" << EOF
+# About
+
+TODO: Add a detailed explanation of the ${slug} concept with examples.
+EOF
+
+cat > "${concept_dir}/links.json" << EOF
+[
+  {
+    "url": "https://nix.dev/manual/nix/stable/language/",
+    "description": "TODO: Replace with a relevant link for the ${slug} concept."
+  }
+]
+EOF
+
+cat > "${concept_dir}/.meta/config.json" << EOF
+{
+  "blurb": "TODO: Add a one-sentence description of the ${slug} concept.",
+  "authors": ["${author}"],
+  "contributors": []
+}
+EOF
+
+files=$(jq -r --arg dir "${exercise_dir}" '.files | to_entries | map({key: .key, value: (.value | map("'"'"'" + $dir + "/" + . + "'"'"'") | join(" and "))}) | from_entries' "${exercise_dir}/.meta/config.json")
+
+cat << NEXT_STEPS
+
+Your next steps are:
+
+1. Fill in the concept definition in '${concept_dir}/':
+   - Update '${concept_dir}/introduction.md' with a brief intro (shown before the exercise)
+   - Update '${concept_dir}/about.md' with a detailed reference (shown after completing)
+   - Update '${concept_dir}/links.json' with relevant links
+   - Update '${concept_dir}/.meta/config.json' with a blurb
+
+2. Fill in the exercise files:
+   - Create the test suite in $(jq -r '.test' <<< "${files}")
+   - Create the exemplar solution in $(jq -r '.exemplar' <<< "${files}")
+   - Create the stub solution in $(jq -r '.solution' <<< "${files}")
+   - Write '.docs/introduction.md' (teaches the concept in context of this exercise)
+   - Write '.docs/instructions.md' (the problem statement)
+   - Write '.docs/hints.md' (hints for stuck students)
+   - Write '.meta/design.md' (rationale for exercise design)
+
+3. Register the concept in 'config.json':
+   - Add an entry to the 'concepts' array with a new UUID
+   - Add the concept slug to the 'concepts' array in the exercise's entry
+
+4. Verify and validate:
+   - Run 'bin/verify-exercises ${slug}' to confirm the exemplar passes
+   - Run 'bin/configlet lint' and 'bin/configlet fmt'
+NEXT_STEPS
