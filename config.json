@@ -67,6 +67,14 @@
         "difficulty": 4
       },
       {
+        "slug": "all-your-base",
+        "name": "All Your Base",
+        "uuid": "17313086-cc1a-43ce-83a6-eca0c7316bd6",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
         "slug": "allergies",
         "name": "Allergies",
         "uuid": "5d22dc32-ba9b-4603-9acd-2b370c33f774",
