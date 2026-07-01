@@ -1,0 +1,19 @@
+{
+  "authors": [
+    "ricardomaps"
+  ],
+  "files": {
+    "solution": [
+      "isogram.nix"
+    ],
+    "test": [
+      "isogram-test.nix"
+    ],
+    "example": [
+      ".meta/example.nix"
+    ]
+  },
+  "blurb": "Determine whether a phrase is an isogram, a word with no repeated letters.",
+  "source": "Wikipedia",
+  "source_url": "https://en.wikipedia.org/wiki/Isogram"
+}
