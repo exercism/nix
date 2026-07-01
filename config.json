@@ -99,6 +99,14 @@
         "difficulty": 1
       },
       {
+        "slug": "eliuds-eggs",
+        "name": "Eliud's Eggs",
+        "uuid": "8c252436-f8ed-4d3a-8205-2fb988b97167",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
         "slug": "etl",
         "name": "ETL",
         "uuid": "8fe360a2-57b6-45b6-a7e6-e2ac28bf469e",
