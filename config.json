@@ -115,6 +115,14 @@
         "difficulty": 2
       },
       {
+        "slug": "line-up",
+        "name": "Line Up",
+        "uuid": "628286e5-36c4-4ab0-9316-ef9a1bcec97c",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
+      },
+      {
         "slug": "pangram",
         "name": "Pangram",
         "uuid": "d78d5c94-5812-40f5-b4ba-e69d4986b9be",
