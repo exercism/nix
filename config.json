@@ -147,6 +147,14 @@
         "difficulty": 4
       },
       {
+        "slug": "raindrops",
+        "name": "Raindrops",
+        "uuid": "cf47ef61-27cc-4efe-a038-b0aaba507213",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "slug": "resistor-color",
         "name": "Resistor Color",
         "uuid": "724ca359-2918-43e0-992d-77b1f4be430a",
