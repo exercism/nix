@@ -67,6 +67,14 @@
         "difficulty": 4
       },
       {
+        "slug": "acronym",
+        "name": "Acronym",
+        "uuid": "17549857-e14b-4b0e-ba3b-a389de6b7ff0",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "slug": "all-your-base",
         "name": "All Your Base",
         "uuid": "17313086-cc1a-43ce-83a6-eca0c7316bd6",
