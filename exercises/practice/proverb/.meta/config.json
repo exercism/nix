@@ -1,0 +1,19 @@
+{
+  "authors": [
+    "ricardomaps"
+  ],
+  "files": {
+    "solution": [
+      "proverb.nix"
+    ],
+    "test": [
+      "proverb-test.nix"
+    ],
+    "example": [
+      ".meta/example.nix"
+    ]
+  },
+  "blurb": "For want of a horseshoe nail, a kingdom was lost, or so the saying goes. Output the full text of this proverbial rhyme.",
+  "source": "Wikipedia",
+  "source_url": "https://en.wikipedia.org/wiki/For_Want_of_a_Nail"
+}

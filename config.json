@@ -243,6 +243,14 @@
         "difficulty": 6
       },
       {
+        "slug": "proverb",
+        "name": "Proverb",
+        "uuid": "d3920b80-b077-4525-9307-4d836353ca19",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
         "slug": "raindrops",
         "name": "Raindrops",
         "uuid": "cf47ef61-27cc-4efe-a038-b0aaba507213",
