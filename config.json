@@ -195,6 +195,14 @@
         "difficulty": 1
       },
       {
+        "slug": "luhn",
+        "name": "Luhn",
+        "uuid": "a5e7834c-5c8b-4e29-85be-c0d226b2e209",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
         "slug": "matching-brackets",
         "name": "Matching Brackets",
         "uuid": "97a7265a-0ef0-493b-bc4c-48ea357cba94",
