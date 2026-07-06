@@ -163,6 +163,14 @@
         "difficulty": 3
       },
       {
+        "slug": "kindergarten-garden",
+        "name": "Kindergarten Garden",
+        "uuid": "c7cb96e8-1a03-499f-a714-6ac61f78c660",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
         "slug": "leap",
         "name": "Leap",
         "uuid": "2dc1f2e7-07e3-4bca-977f-19a16fca7683",
