@@ -1,4 +1,5 @@
-with builtins; let
+with builtins;
+let
   lib = import <nixpkgs/lib>;
   exercise = import ./booleans.nix;
   results = lib.debug.runTests {
@@ -40,16 +41,13 @@ with builtins; let
     };
   };
 in
-  if results == []
-  then "All tests passed!\n"
-  else
-    deepSeq
-    (map
-      (t:
-        trace ''
-          ${t.name}:
-            expected: ${toJSON t.expected}
-            result: ${toJSON t.result}''
-        t)
-      results)
-    (throw "${toString (length results)} tests failed!\n")
+if results == [ ] then
+  "All tests passed!\n"
+else
+  deepSeq (map (
+    t:
+    trace ''
+      ${t.name}:
+        expected: ${toJSON t.expected}
+        result: ${toJSON t.result}'' t
+  ) results) (throw "${toString (length results)} tests failed!\n")
