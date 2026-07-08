@@ -1,53 +1,49 @@
-with builtins;
 let
-  lib = import <nixpkgs/lib>;
-  exercise = import ./booleans.nix;
-  results = lib.debug.runTests {
-    testYearNotDivisibleBy4 = {
-      expr = exercise.leapYear 2015;
-      expected = false;
-    };
-    testYearDivisibleBy2NotBy4 = {
-      expr = exercise.leapYear 1970;
-      expected = false;
-    };
-    testYearDivisibleBy4NotBy100 = {
-      expr = exercise.leapYear 1996;
-      expected = true;
-    };
-    testYearDivisibleBy4And5 = {
-      expr = exercise.leapYear 1960;
-      expected = true;
-    };
-    testYearDivisibleBy100NotBy400 = {
-      expr = exercise.leapYear 2100;
-      expected = false;
-    };
-    testYearDivisibleBy100NotBy3 = {
-      expr = exercise.leapYear 1900;
-      expected = false;
-    };
-    testYearDivisibleBy400 = {
-      expr = exercise.leapYear 2000;
-      expected = true;
-    };
-    testYearDivisibleBy400NotBy125 = {
-      expr = exercise.leapYear 2400;
-      expected = true;
-    };
-    testYearDivisibleBy200NotBy400 = {
-      expr = exercise.leapYear 1800;
-      expected = false;
-    };
-  };
+  inherit (import ./booleans.nix) leapYear;
 in
-if results == [ ] then
-  "All tests passed!\n"
-else
-  deepSeq (map (
-    t:
-    trace ''
-      ${t.name}:
-        expected: ${toJSON t.expected}
-        result: ${toJSON t.result}'' t
-  ) results) (throw "${toString (length results)} tests failed!\n")
+{
+  "test year not divisible by 4" = {
+    expr = leapYear 2015;
+    expected = false;
+  };
+
+  "test year divisible by 2 not by 4" = {
+    expr = leapYear 1970;
+    expected = false;
+  };
+
+  "test year divisible by 4 not by 100" = {
+    expr = leapYear 1996;
+    expected = true;
+  };
+
+  "test year divisible by 4 and 5" = {
+    expr = leapYear 1960;
+    expected = true;
+  };
+
+  "test year divisible by 100 not by 400" = {
+    expr = leapYear 2100;
+    expected = false;
+  };
+
+  "test year divisible by 100 not by 3" = {
+    expr = leapYear 1900;
+    expected = false;
+  };
+
+  "test year divisible by 400" = {
+    expr = leapYear 2000;
+    expected = true;
+  };
+
+  "test year divisible by 400 not by 125" = {
+    expr = leapYear 2400;
+    expected = true;
+  };
+
+  "test year divisible by 200 not by 400" = {
+    expr = leapYear 1800;
+    expected = false;
+  };
+}

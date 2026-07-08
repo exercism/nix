@@ -21,6 +21,7 @@ required_tool() {
 
 required_tool jq
 required_tool nix
+required_tool nix-unit
 
 copy_example_or_exemplar_to_solution() {
     jq -c '[.files.solution, .files.exemplar // .files.example] | transpose | map({src: .[1], dst: .[0]}) | .[]' .meta/config.json \
@@ -36,7 +37,7 @@ unskip_tests() {
 run_tests() {
     local test_file
     test_file=$(jq -r '.files.test[0]' .meta/config.json)
-    nix eval --raw --impure -f "${test_file}"
+    nix-unit "${test_file}"
 }
 
 verify_exercise() {
@@ -53,6 +54,7 @@ verify_exercise() {
     (
         trap 'rm -rf "$tmp_dir"' EXIT
         cp -r "${dir}/." "${tmp_dir}"
+        chmod -R u+w "${tmp_dir}"
         cd "${tmp_dir}"
 
         copy_example_or_exemplar_to_solution

@@ -17,13 +17,5 @@ jobs:
       - name: Install Nix
         uses: DeterminateSystems/nix-installer-action@e50d5f73bfe71c2dd0aa4218de8f4afa59f8f81d
 
-      - name: Set up nixpkgs channel
-        run: |
-          nix-channel --add https://nixos.org/channels/nixpkgs-unstable nixpkgs
-          nix-channel --update
-
-      - name: Install jq
-        run: sudo apt-get install -y jq
-
-      - name: Verify all exercises
-        run: bin/verify-exercises
+      - name: Run flake checks
+        run: nix flake check -Lvv --log-format bar-with-logs

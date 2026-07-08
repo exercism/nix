@@ -1,3 +1,3 @@
 {
-  hello = { }: "Goodbye, Mars!";
+  hello = _: "Goodbye, Mars!";
 }

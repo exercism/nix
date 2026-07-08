@@ -43,24 +43,25 @@
           '';
 
           formatting = pkgs.runCommand "formatting-check" { } ''
-            ${pkgs.nixfmt-tree}/bin/treefmt --ci --tree-root ${./.}
+            cp -r ${./.} repo
+            chmod -R +w repo
+            ${pkgs.nixfmt-tree}/bin/treefmt --ci --tree-root repo
             touch $out
           '';
 
           unit-tests =
             pkgs.runCommand "verify-exercises"
               {
-                src = ./.;
                 buildInputs = with pkgs; [
                   jq
                   nix
+                  nix-unit
                 ];
                 NIX_PATH = "nixpkgs=${nixpkgs}";
-                NIX_CONFIG = "experimental-features = nix-command";
               }
               ''
                 export HOME=$TMPDIR
-                cd $src
+                cd ${./.}
                 bash bin/verify-exercises
                 touch $out
               '';
