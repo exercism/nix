@@ -1,5 +1,4 @@
 {
-  "track_id": "nix",
   "language": "Nix",
   "slug": "nix",
   "active": false,
@@ -17,10 +16,18 @@
     "highlightjs_language": "nix"
   },
   "files": {
-    "solution": ["%{kebab_slug}.nix"],
-    "test": ["%{kebab_slug}-test.nix"],
-    "example": [".meta/example.nix"],
-    "exemplar": [".meta/exemplar.nix"]
+    "solution": [
+      "%{kebab_slug}.nix"
+    ],
+    "test": [
+      "%{kebab_slug}-test.nix"
+    ],
+    "example": [
+      ".meta/example.nix"
+    ],
+    "exemplar": [
+      ".meta/exemplar.nix"
+    ]
   },
   "exercises": {
     "concept": [
@@ -28,7 +35,9 @@
         "slug": "booleans",
         "name": "Booleans",
         "uuid": "ee84b41f-bee8-477d-a073-aad084cde658",
-        "concepts": ["booleans"],
+        "concepts": [
+          "booleans"
+        ],
         "prerequisites": []
       }
     ],
@@ -91,12 +100,12 @@
     }
   ],
   "tags": [
-    "paradigm/functional",
-    "typing/dynamic",
-    "typing/strong",
     "execution_mode/interpreted",
-    "platform/mac",
+    "paradigm/functional",
     "platform/linux",
-    "runtime/language_specific"
+    "platform/mac",
+    "runtime/language_specific",
+    "typing/dynamic",
+    "typing/strong"
   ]
 }

@@ -1,5 +1,7 @@
 {
-  "authors": ["andrii619"],
+  "authors": [
+    "andrii619"
+  ],
   "files": {
     "solution": [
       "reverse-string.nix"
