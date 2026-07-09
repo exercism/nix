@@ -91,6 +91,14 @@
         "difficulty": 1
       },
       {
+        "slug": "difference-of-squares",
+        "name": "Difference of Squares",
+        "uuid": "8b3161b6-f72b-4b5f-a806-96fe6aee4690",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1
+      },
+      {
         "slug": "etl",
         "name": "ETL",
         "uuid": "8fe360a2-57b6-45b6-a7e6-e2ac28bf469e",
