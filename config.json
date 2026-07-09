@@ -115,6 +115,14 @@
         "difficulty": 2
       },
       {
+        "slug": "leap",
+        "name": "Leap",
+        "uuid": "2dc1f2e7-07e3-4bca-977f-19a16fca7683",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2
+      },
+      {
         "slug": "line-up",
         "name": "Line Up",
         "uuid": "628286e5-36c4-4ab0-9316-ef9a1bcec97c",
