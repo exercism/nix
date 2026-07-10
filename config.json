@@ -187,6 +187,14 @@
         "difficulty": 2
       },
       {
+        "slug": "series",
+        "name": "Series",
+        "uuid": "65076c1b-8684-4f0d-87c8-1386c3ed5cea",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
         "slug": "strain",
         "name": "Strain",
         "uuid": "33eb5581-aa2b-4ef0-b3ee-20e65eccd585",
