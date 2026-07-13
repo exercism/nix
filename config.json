@@ -131,6 +131,14 @@
         "difficulty": 1
       },
       {
+        "slug": "matching-brackets",
+        "name": "Matching Brackets",
+        "uuid": "97a7265a-0ef0-493b-bc4c-48ea357cba94",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
         "slug": "pangram",
         "name": "Pangram",
         "uuid": "d78d5c94-5812-40f5-b4ba-e69d4986b9be",
