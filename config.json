@@ -131,6 +131,14 @@
         "difficulty": 2
       },
       {
+        "slug": "isogram",
+        "name": "Isogram",
+        "uuid": "1ab10a86-b307-4498-bfcf-4df39c166601",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
         "slug": "leap",
         "name": "Leap",
         "uuid": "2dc1f2e7-07e3-4bca-977f-19a16fca7683",
