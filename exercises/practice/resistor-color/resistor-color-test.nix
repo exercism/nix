@@ -1,5 +1,5 @@
 let
-  inherit (import ./.meta/example.nix) colorCode colors;
+  inherit (import ./resistor-color.nix) colorCode colors;
 in
 {
   "test Black" = {
