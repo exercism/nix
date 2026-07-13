@@ -1,5 +1,5 @@
 let
-  inherit (import ./.meta/example.nix) slices;
+  inherit (import ./series.nix) slices;
 in
 {
   "test slices of one from one" = {

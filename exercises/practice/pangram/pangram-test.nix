@@ -1,5 +1,5 @@
 let
-  inherit (import ./.meta/example.nix) isPangram;
+  inherit (import ./pangram.nix) isPangram;
 in
 {
   "test empty sentence" = {

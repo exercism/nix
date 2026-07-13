@@ -1,5 +1,5 @@
 let
-  inherit (import ./.meta/example.nix) score;
+  inherit (import ./scrabble-score.nix) score;
 in
 {
   "test lowercase letter" = {

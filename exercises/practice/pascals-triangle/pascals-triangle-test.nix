@@ -1,5 +1,5 @@
 let
-  inherit (import ./.meta/example.nix) rows;
+  inherit (import ./pascals-triangle.nix) rows;
 in
 {
   "test zero rows" = {

@@ -1,5 +1,5 @@
 let
-  inherit (import ./.meta/example.nix) isPaired;
+  inherit (import ./matching-brackets.nix) isPaired;
 in
 {
   "test paired square brackets" = {
