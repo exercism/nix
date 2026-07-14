@@ -1,0 +1,17 @@
+{
+  "authors": [
+    "ricardomaps"
+  ],
+  "files": {
+    "solution": [
+      "all-your-base.nix"
+    ],
+    "test": [
+      "all-your-base-test.nix"
+    ],
+    "example": [
+      ".meta/example.nix"
+    ]
+  },
+  "blurb": "Convert a number, represented as a sequence of digits in one base, to any other base."
+}
