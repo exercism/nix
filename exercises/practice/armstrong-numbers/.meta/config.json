@@ -1,0 +1,19 @@
+{
+  "authors": [
+    "ricardomaps"
+  ],
+  "files": {
+    "solution": [
+      "armstrong-numbers.nix"
+    ],
+    "test": [
+      "armstrong-numbers-test.nix"
+    ],
+    "example": [
+      ".meta/example.nix"
+    ]
+  },
+  "blurb": "Determine if a number is an Armstrong number.",
+  "source": "Wikipedia",
+  "source_url": "https://en.wikipedia.org/wiki/Narcissistic_number"
+}
