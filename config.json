@@ -139,6 +139,14 @@
         "difficulty": 2
       },
       {
+        "slug": "hamming",
+        "name": "Hamming",
+        "uuid": "98b902ff-b4d3-4fc2-a498-e6f3eeca4818",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
         "slug": "isogram",
         "name": "Isogram",
         "uuid": "1ab10a86-b307-4498-bfcf-4df39c166601",
