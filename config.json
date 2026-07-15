@@ -243,6 +243,14 @@
         "difficulty": 6
       },
       {
+        "slug": "protein-translation",
+        "name": "Protein Translation",
+        "uuid": "5a848247-6c37-4be7-b351-de5671f31ee9",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
         "slug": "proverb",
         "name": "Proverb",
         "uuid": "d3920b80-b077-4525-9307-4d836353ca19",
