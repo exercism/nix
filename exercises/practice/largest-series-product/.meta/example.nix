@@ -3,14 +3,13 @@ let
     stringToCharacters
     toInt
     pipe
-    drop
-    take
+    sublist
     length
     genList
     ;
   maximum = builtins.foldl' (a: b: if b > a then b else a) 0;
   product = builtins.foldl' (a: b: a * b) 1;
-  chunksOf = size: list: genList (i: take size (drop i list)) (length list - size + 1);
+  chunksOf = size: list: genList (i: sublist i size list) (length list - size + 1);
 in
 {
   largestProduct =
