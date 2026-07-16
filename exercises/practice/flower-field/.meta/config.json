@@ -1,0 +1,17 @@
+{
+  "authors": [
+    "ricardomaps"
+  ],
+  "files": {
+    "solution": [
+      "flower-field.nix"
+    ],
+    "test": [
+      "flower-field-test.nix"
+    ],
+    "example": [
+      ".meta/example.nix"
+    ]
+  },
+  "blurb": "Mark all the flowers in a garden."
+}
