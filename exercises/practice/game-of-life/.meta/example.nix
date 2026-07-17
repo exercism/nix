@@ -5,6 +5,7 @@ let
     length
     cartesianProduct
     remove
+    range
     ;
 
   cellAt =
@@ -16,21 +17,13 @@ let
       elemAt (elemAt matrix x) y;
 
   nextCell =
-    matrix: x: y:
+    matrix:
+    { x, y }@curPos:
     let
-      curPos = { inherit x y; };
       alive = cellAt matrix curPos == 1;
       neighbors = remove curPos (cartesianProduct {
-        x = [
-          (x - 1)
-          x
-          (x + 1)
-        ];
-        y = [
-          (y - 1)
-          y
-          (y + 1)
-        ];
+        x = map (builtins.add x) (range (-1) 1);
+        y = map (builtins.add y) (range (-1) 1);
       });
       liveNeighbors = builtins.foldl' (acc: pos: cellAt matrix pos + acc) 0 neighbors;
     in
@@ -43,5 +36,5 @@ in
       rows = length matrix;
       cols = if rows == 0 then 0 else length (elemAt matrix 0);
     in
-    genList (row: genList (col: nextCell matrix row col) cols) rows;
+    genList (x: genList (y: nextCell matrix { inherit x y; }) cols) rows;
 }
