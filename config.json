@@ -203,6 +203,14 @@
         "difficulty": 3
       },
       {
+        "slug": "knapsack",
+        "name": "Knapsack",
+        "uuid": "59625620-6a89-4a43-8668-37c1288f03f1",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 7
+      },
+      {
         "slug": "largest-series-product",
         "name": "Largest Series Product",
         "uuid": "8697c2bc-49c7-4839-b487-c4ce7cb53d42",
