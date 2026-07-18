@@ -171,6 +171,14 @@
         "difficulty": 2
       },
       {
+        "slug": "flower-field",
+        "name": "Flower Field",
+        "uuid": "b8282bc0-f4eb-448f-902c-11a4248b6ad0",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 7
+      },
+      {
         "slug": "game-of-life",
         "name": "Conway's Game of Life",
         "uuid": "75544ea7-75cf-4dfc-888b-29c23d86999b",
