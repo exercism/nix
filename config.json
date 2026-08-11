@@ -395,6 +395,14 @@
         "difficulty": 5
       },
       {
+        "slug": "say",
+        "name": "Say",
+        "uuid": "99cc6bd5-2444-428a-8a1f-14b8e866d8ca",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
         "slug": "scrabble-score",
         "name": "Scrabble Score",
         "uuid": "03c2dcb6-a940-433e-94bb-7171274e4d9f",
